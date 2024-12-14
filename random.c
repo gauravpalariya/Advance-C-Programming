@@ -1,20 +1,16 @@
-/* random.c */
+/* program for pseudo random number generation */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-int random_number()
-{
-	int r;
-	r = rand();
-	return r;
-}
 
 int main()
 {
+
+	int number;
 	srand(getpid());
-	printf("%d\n", random_number());
-	printf("%d\n", random_number());
+	number = rand();
+	printf("Number is %d\n", number);
 	return 0;
 }
